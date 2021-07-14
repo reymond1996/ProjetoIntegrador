@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+usuario:string="";
+senha:string="";
   constructor(private router : Router) { }
 
   ngOnInit() {
@@ -15,5 +16,7 @@ export class LoginPage implements OnInit {
   cadastrar(){
     this.router.navigate(["/cadastro"]);
   }
+login(){
 
+}
 }
