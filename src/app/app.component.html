@@ -3,9 +3,19 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
+          <ion-avatar>
+          <img src="https://lh3.googleusercontent.com/fife/AAWUweVWGLbBcjKuHmW0vW_bUkqAnoIJG7nj63_xlSTaXmE21XzuDl8FlpcwIvu9OMdEvCbqXvC57W6fOIRzevrahQkS9_Up2yHkk9iRoO15yjbK_7aPljJkhf5zwkGC7ry9TRYadQi2vc_pZxbI48jOSbpD_T52rpGu0rYpZ6AnrR9YB_TdL1rGXpPfv56UFkUJ9379iMGwENRaY6nUCs-1943U4_36R6TqbrbRmSVoIg5926mxV02JKV8O4CIEi9YJ4zrX3-hTke1PyJjdjMon82tdWfRAG4uQJszQa8WrOl7hEy7Ygq8jK3cpLSQEJG767Q__lPFViY-MqiZI0J8n0sj0EWP1ToZVgXej9jK7DYMeWSwnA6Fzf0Zm8eZ5IFeRbZR6E8By5o4Yuj83xOjkmjvjYGejNI0Hjogq7X_3IJLroXMCpyQc6X_UVcWNHBU1EUEGVHI05SKtUd8L8OUOTm8c8ief70A8lmtlHW5nSLobx9_NFy_W9rEwhYiJr-vVqd1L_xFka-W2V1SACplQITSrjN4UEIPVSFz-ATNU80Lq9afW2HNviHATYRK5x-z9UnC9RWat8RZKSrQbl8JPA0dXsSvcW8KWBh7XvnflIxHSMfv1UIJN0shzmSzEu3YtfL3828kEhThi1T-zKnJthlXziljtZEankkg62sHGTttNYvNSgp22uJboWsQXQ2ZDiTJx9rdL0E4Gd7sJrM3jMlnJdXrMCDYyO9Ff=w500-h500?authuser=1">
+          </ion-avatar>
           <ion-list-header>Apis's</ion-list-header>
-          <ion-note>Minha Aplicação</ion-note>
+         
+         
 
+         
+          
+      
+          
+         
+          
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>

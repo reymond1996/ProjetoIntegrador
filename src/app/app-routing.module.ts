@@ -18,7 +18,25 @@ const routes: Routes = [
   {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
-  }
+  },
+  {
+    path: 'pedidos',
+    loadChildren: () => import('./pedidos/pedidos.module').then( m => m.PedidosPageModule)
+  },
+  {
+    path: 'parceiros',
+    loadChildren: () => import('./parceiros/parceiros.module').then( m => m.ParceirosPageModule)
+  },
+  {
+    path: 'devs',
+    loadChildren: () => import('./devs/devs.module').then( m => m.DevsPageModule)
+  },
+  
+  {
+    path: 'logout',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  
 ];
 
 @NgModule({

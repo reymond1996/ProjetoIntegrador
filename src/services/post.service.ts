@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { stringify } from 'querystring';
+import 'rxjs/add/operator/map';
 @Injectable()
 export class PostService {
 server: string= "http://localhost/pasta.php/";
