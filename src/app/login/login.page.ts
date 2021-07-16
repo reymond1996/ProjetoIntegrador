@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,20 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 usuario:string="";
 senha:string="";
-  constructor(private router : Router) { }
+  constructor(private router : Router, private blockMenu: MenuController, private nameless : Router) { }
 
   ngOnInit() {
+    this.blockMenu.enable(false)
   }
   cadastrar(){
     this.router.navigate(["/cadastro"]);
   }
+  entrar(){
+    this.nameless.navigate(["/folder"])
+
+  }
+ 
+ 
 login(){
 
 }

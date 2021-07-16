@@ -18,4 +18,5 @@ export class FolderPage implements OnInit {
     this.router.navigate(["/login"])
     
   }
+  
 }
