@@ -1,0 +1,16 @@
+create database php_crud_api_db;
+
+use php_crud_api_db;
+drop table tbl_product;
+create table  tbl_product(
+product_id int primary key auto_increment ,
+product_name varchar(20) not null,
+product_price int(11) not null
+
+);
+show tables;
+insert into tbl_product(product_id,product_name,product_price)
+ values(null,'shirts',400),
+       (null,'watches',300); 
+       
+       select * from tbl_product;
