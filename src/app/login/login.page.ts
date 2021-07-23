@@ -17,8 +17,17 @@ senha:string="";
     this.blockMenu.enable(false)
   }
   cadastrar(){
+    let dados = {
+        "cnome":"rafael souza 2",
+        "cemail":"rafael.souza@igtt.com",
+        "csenha":"789",
+        "ccpf":"45654654"
+      }
+      this.sevice.dadosApi(dados, 'picliente.php');
+
     this.router.navigate(["/cadastro"]);
   }
+  
   entrar(){
     this.nameless.navigate(["/folder"])
 

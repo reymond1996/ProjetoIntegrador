@@ -3,7 +3,8 @@
  header("Content-Type: application/json");
  header("Acess-Control-Allow-Origin: *");
 
- $conn = mysqli_connect("localhost","root","","mydb");
+// $conn = mysqli_connect("localhost","root","","mydb");
+include_once "dgconfigPI.php";
  $response = array();
  if ($conn){
        $sql = "select * from cliente";
