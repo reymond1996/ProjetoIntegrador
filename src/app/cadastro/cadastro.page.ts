@@ -8,26 +8,44 @@ import { PostService } from 'src/services/post.service';
   styleUrls: ['./cadastro.page.scss'],
 })
 export class CadastroPage implements OnInit {
-
-  constructor(private router : Router,private ApiC:PostService) { }
+email: string;
+usuario:string;
+senha:string
+confirmaSenha:string;
+  constructor(private router : Router,private ApiC:PostService,public _postService: PostService) { }
 
   ngOnInit() {
   }
    cadastro(){
-    let dados = {
-        cnome:"ramon de souza 2",
-        cemail:"ramon.souza@igtt.com",
-        csenha:"111",
-        ccpf:"336547891"
-      }
-      this.ApiC.dadosApi(dados, 'picliente.php').subscribe(async data=>{
-        console.log(data)
-      })
+     let data ={
+  email: this.email,
+  usuario: this.usuario,
+  senha: this.senha,
+  confirmaSenha: this.confirmaSenha,
+     } 
+     this._postService.cadastro(data).subscribe((res:any)=>{
+       console.log("SUCCESS ===",res);
+     },(error:any)=>{
+       console.log("ERROR ===",error)
+     })
+
+     }
+      //let dados = {
+      //  cnome:"ramon de souza 2",
+        //cemail:"ramon.souza@igtt.com",
+        //csenha:"111",
+        //ccpf:"336547891"
+      //}
+      //this.ApiC.dadosApi(dados, 'picliente.php').subscribe(async data=>{
+        //console.log(data)
+      //})
 
     
-  }
+  //}
 
-  login(){
-    this.router.navigate(["/login"]);
-  }
-}
+  //login(){
+    //this.router.navigate(["/login"]);
+  //}
+//}
+    }
+  

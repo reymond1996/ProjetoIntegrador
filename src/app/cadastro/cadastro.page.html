@@ -10,22 +10,22 @@
 <ion-content>
 <ion-item>
   <ion-label position="floating">Email</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)]="email"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating">Usuário</ion-label> 
-  <ion-input></ion-input>
+  <ion-input [(ngModel)]="usuario"></ion-input >
 </ion-item>
 
 <ion-item>
   <ion-label position="floating">Senha</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)]="senha"></ion-input >
 </ion-item>
 
 <ion-item>
   <ion-label position="floating">Confirma Senha</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)]="confirmaSenha"></ion-input>
 </ion-item>
 
 <ion-button expand="block" (click)="cadastro()">Cadastrar</ion-button>

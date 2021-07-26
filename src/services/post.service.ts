@@ -4,17 +4,21 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PostService {
 server: string= "http://localhost/cliente/";
-  
-constructor(private http: HttpClient) { }
+headers: HttpHeaders;  
+
+constructor(public http: HttpClient) { }
+cadastro(data){
+  return this.http.post('http://localhost/cliente/api-create',data);
+}
   dadosApi(dados:any, nomeApi: string){
-    const httpOptions = {
-      headers.append('Access-Control-Allow-Headers', 'Content-Type')
-      headers.append('Access-Control-Allow-Methods', 'GET')
-      headers.append('Access-Control-Allow-Origin', '*')
-      headers: new HttpHeaders({'Content-Type':'aplication/json'})
-    }
+    var headers = new Headers();
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    headers.append('Accept','application/json');
+    headers.append('Content-type','application/json');
+  
     let url = this.server + nomeApi;
-    return this.http.post(url,JSON.stringify(dados),httpOptions).map(res => res);
+    return this.http.post(url,JSON.stringify(dados)).map(res => res);
   }
 }
 

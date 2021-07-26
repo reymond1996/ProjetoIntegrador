@@ -1,4 +1,10 @@
 <?php
+header('Content-Type: application/json; charset=utf-8');
+header('Content-Type: application/json; charset=utf-8');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT');
+header('Accept: application/json');
+header('Content-type: application/json');
 
 $DBHost ="localhost";
 $DBUser ="root";
